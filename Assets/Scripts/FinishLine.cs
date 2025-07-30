@@ -10,9 +10,11 @@ public class FinishLine : MonoBehaviour
     {
         if (other.tag == "Ch") // 4분59초
         {
+            GetComponent<AudioSource>().Play();
             finshEffect.Play();
             Debug.Log("Finsh!");
             Invoke("ReloadScene", MagicNumber);
+            
         }
     }
     void ReloadScene()
